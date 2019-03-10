@@ -1,6 +1,7 @@
 -- B''H --
 
 /*
+-- ------------------------------------------------------------------------------------
 sql-task-6:
 - See the table `data-science-course-226116.sql_lessons.google_ads_etl_step_1` 
 - Take a look at the following columns:
@@ -19,7 +20,7 @@ sql-task-6:
     - Only show where clicks is more than 4
     - Only show where your cost_per_click doesn't equal the table's avg_cpc value
     - Sort by cost_per_click descending
-    
+-- ----------------------------------------------------------------------------------------
 */
 
 select            account, 
@@ -30,7 +31,8 @@ select            account,
                   -- -----------------------
 from              `data-science-course-226116.sql_lessons.google_ads_etl_step_1`
                   -- -----------------------
-where             clicks > 4 and 
+where             clicks > 4 
+  and 
                   round(cost / clicks, 2) <> avg_cpc
                   -- -----------------------
 order by          cost_per_click desc
