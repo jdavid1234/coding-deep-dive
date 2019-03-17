@@ -2,13 +2,21 @@
 sql-Task-5
 */
 
-select    distinct 
+with step_1 as
+(
+select   
+
+distinct 
           fips_class_code,
           -- ----------------------------
           substr(fips_class_code, 1, 1) as char_1,
-          substr(fips_class_code, 2, 1) as char_2,
+          substr(fips_class_code, 2, 1) as char_2
           -- ----------------------------
-          case cast(substr(fips_class_code, 2, 1) as int64)
+from     `data-science-course-226116.sql_lessons.counties`
+)
+
+select  fips_class_code, char_1, char_2,
+          case cast(char_2 as int64)
               when 1 then 'One'
               when 2 then 'Two'
               when 3 then 'Three'
@@ -18,6 +26,24 @@ select    distinct
               when 7 then 'Seven'
           end char2_desc
           -- ----------------------------
-from     `data-science-course-226116.sql_lessons.counties`
-          -- ----------------------------
+
+       
+from step_1          
 order by  char_2
+
+
+/*
+
+with step_1 as
+(
+select   
+
+from   original data 
+
+)
+
+select 
+
+from step_1
+
+*/
