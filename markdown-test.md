@@ -50,3 +50,12 @@ Multiline editing
     - there I m    there is no time to add today editing yoday          ads 
 4. `asd`
     - there I m    there is no time to add today editing yoday         sad  
+
+
+
+
+Different data types:
+String 
+Numeric
+Intiger
+Date 
