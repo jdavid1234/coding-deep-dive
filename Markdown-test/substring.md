@@ -1,0 +1,1 @@
+SELECT SUBSTRING('SQL Tutorial', 1, 3) as ExtractString;
