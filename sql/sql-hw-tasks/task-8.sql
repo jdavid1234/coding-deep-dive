@@ -11,3 +11,4 @@ where impressions > 2
 group by account
 
 having avg(cost) > 4
+----

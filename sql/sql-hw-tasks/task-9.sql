@@ -11,4 +11,4 @@ having max(cost) > 80
 or sum(cost) / sum(impressions)  > 5
   
 
-order by cost_per_impression desc 
+order by cost_per_impression desc ---
