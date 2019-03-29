@@ -4,6 +4,10 @@ with step_1 as
 (
 select    distinct field_6
 from     `data-science-course-226116.sql_lessons.stock_exchanges_raw_input` 
+
+order by 1
+
+
 ),
 
 step_2 as
@@ -401,28 +405,35 @@ step_29 as
 (
 select *,
 
-concat(step_19_times_part_1_open_add_00, ':00') step_27_times_part_1_open_with_new_colon
+          concat(
+                      substr(step_19_times_part_1_open_add_00, 1, step_23_times_part_1_open_str_pos_colon -3),
+          
+                       ':', 
+                        substr(step_19_times_part_1_open_add_00, step_23_times_part_1_open_str_pos_colon -2)
+          
+                )
 
-substr(step_23_times_part_1_open_str_pos_colon,1, -3)----------------------------------------------------------------
- 
+step_27_times_part_1_open_with_new_colon
 
 from step_28
 ),
 
-
-
+	
 
 
 step_30 as 
 (
 select *,
 
-concat(step_20_times_part_1_close_add_00, ':00') step_28_times_part_1_close_with_new_colon
-
+            concat(substr(step_20_times_part_1_close_add_00, 1, step_24_times_part_1_close_str_pos_colon -3), 
+                  ':',
+                  substr(step_20_times_part_1_close_add_00, step_24_times_part_1_close_str_pos_colon -2 )
+                  
+                  )
+                  step_28_times_part_1_close_with_new_colon
 
 from step_29
 ),
-
 
 
 
@@ -430,9 +441,14 @@ step_31 as
 (
 select *,
 
-concat(step_21_times_part_2_open_add_00, ':00') step_29_times_part_2_open_with_new_colon	
+             concat(substr(step_21_times_part_2_open_add_00, 1, step_25_times_part_2_open_str_pos_colon -3), 
+             ':', 
+             substr(step_21_times_part_2_open_add_00, step_25_times_part_2_open_str_pos_colon -2)	
 
-
+                  )
+                  step_29_times_part_2_open_with_new_colon
+ 
+ 
 from step_30
 ),
 
@@ -443,8 +459,13 @@ step_32 as
 (
 select *,
 
-concat(step_22_times_part_2_close_add_00, ':00') step_30_times_part_2_close_with_new_colon
+              concat(substr(step_22_times_part_2_close_add_00, 1, step_26_times_part_2_close_str_pos_colon -3),
+              ':', 
+              substr(step_22_times_part_2_close_add_00, step_26_times_part_2_close_str_pos_colon -2)
 
+
+                    )
+                    step_30_times_part_2_close_with_new_colon
 
 from step_31
 ),
@@ -459,14 +480,62 @@ safe_cast(step_27_times_part_1_open_with_new_colon as time) step_31_times_part_1
 
 
 from step_32
+),
+
+
+step_34 as 
+
+(
+
+select*, 
+
+safe_cast(step_28_times_part_1_close_with_new_colon as time) step_32_times_part_1_close_cast_as_time
+
+from step_33 
+
+
+),
+
+
+
+step_35 as 
+
+
+(
+
+
+select*, 
+
+safe_cast(step_29_times_part_2_open_with_new_colon as time) step_33_times_part_2_open_cast_as_time
+
+from step_34
+
+
+),
+
+
+step_36 as
+
+
+(
+
+
+
+select*, 
+
+
+safe_cast(step_30_times_part_2_close_with_new_colon as time) 	step_34_times_part_2_close_cast_as_time
+
+from step_35
+
+
 )
 
-
-
-
+					
 
 select  *
-from step_33----------------------
+from step_36
+
 
 
 
