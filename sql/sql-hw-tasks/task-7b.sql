@@ -36,9 +36,9 @@ stg_01 as
 select *,
 
           case 
-              when step_00_mon_fri_flag = Y
-              then substr(lower(field_6), 1, 18)
-              else step_00_mon_fri_flag = Y
+              when step_00_mon_fri_flag = 'Y'
+              then substr(field_6,18)
+              else field_6
           end step_01_remove_mon_fri
 
 
@@ -126,11 +126,11 @@ select *,
 
                case 
                     when step_05_times_prefix is not null
-                    then (trim                                              --trim is needed here since we are replacing the begining of a string with a space 
+                    then trim(                                             --trim is needed here since we are replacing the begining of a string with a space 
                                  replace(step_01_remove_mon_fri,
 
 
-                                            concat(step_05_times_prefix, ':')
+                                            concat(step_05_times_prefix, ':'),
 
                                             ' '                                
 
@@ -291,9 +291,9 @@ stg_014 as
 (
     
 select *,        case 
-                      when step_12_str_pos_of_slash  >  1
+                      when step_12_str_pos_of_slash  >  0
                       then substr(step_11_remove_colons, step_12_str_pos_of_slash +1)
-                      else step_11_remove_colons
+                      else null
                  end step_14_times_part_2
 
             
@@ -342,6 +342,7 @@ stg_017 as
 select *,      case 
                     when step_14_times_part_2 is not null
                     then substr(step_14_times_part_2, 1, strpos(step_14_times_part_2, '-') -1) 
+                    
                 end step_17_times_part_2_open
 
 
@@ -380,9 +381,9 @@ stg_019 as
 
 (
     
-select *,     concat(step_15_times_part_1_open, ':00') step_19_times_part_1_open_add_00
-              concat(step_16_times_part_1_close, ':00') step_20_times_part_1_close_add_00
-              concat(step_17_times_part_2_open, ':00') step_21_times_part_2_open_add_00
+select *,     concat(step_15_times_part_1_open, ':00') step_19_times_part_1_open_add_00,
+              concat(step_16_times_part_1_close, ':00') step_20_times_part_1_close_add_00,
+              concat(step_17_times_part_2_open, ':00') step_21_times_part_2_open_add_00,
               concat(step_18_times_part_2_close, ':00') step_22_times_part_2_close_add_00
 
             
@@ -397,9 +398,9 @@ stg_020 as
 
 (
     
-select *,      strpos(step_19_times_part_1_open_add_00, ':') step_23_times_part_1_open_str_pos_colon
-               strpos(step_20_times_part_1_close_add_00, ':') step_24_times_part_1_close_str_pos_colon
-               strpos(step_21_times_part_2_open_add_00, ':') step_25_times_part_2_open_str_pos_colon
+select *,      strpos(step_19_times_part_1_open_add_00, ':') step_23_times_part_1_open_str_pos_colon,
+               strpos(step_20_times_part_1_close_add_00, ':') step_24_times_part_1_close_str_pos_colon,
+               strpos(step_21_times_part_2_open_add_00, ':') step_25_times_part_2_open_str_pos_colon,
                strpos(step_22_times_part_2_close_add_00, ':') step_26_times_part_2_close_str_pos_colon
         	
         	
@@ -473,7 +474,7 @@ select *,          case
                         then concat(
                         
                         
-                        substr(step_21_times_part_2_open_add_00, step_25_times_part_2_open_str_pos_colon -3), 
+                        substr(step_21_times_part_2_open_add_00, 1, step_25_times_part_2_open_str_pos_colon -3), 
 
 
 
@@ -486,7 +487,7 @@ select *,          case
 
 
                                     )
-                    end  step_29_times_part_2_open_with_new_colon
+                    end  step_29_times_part_2_open_with_new_colon,
 
 
 
@@ -498,7 +499,7 @@ select *,          case
                         then concat(
                         
                         
-                        substr(step_22_times_part_2_close_add_00, step_26_times_part_2_close_str_pos_colon -3), 
+                        substr(step_22_times_part_2_close_add_00, 1, step_26_times_part_2_close_str_pos_colon -3), 
 
 
 
@@ -526,9 +527,9 @@ stg_024 as
 
 (
 
-select*, safe_cast(step_27_times_part_1_open_with_new_colon as time)  step_31_times_part_1_open_cast_as_time
-         safe_cast(step_28_times_part_1_close_with_new_colon as time) step_32_times_part_1_close_cast_as_time
-         safe_cast(step_29_times_part_2_open_with_new_colon as time)  step_33_times_part_2_open_cast_as_time
+select*, safe_cast(step_27_times_part_1_open_with_new_colon as time)  step_31_times_part_1_open_cast_as_time,
+         safe_cast(step_28_times_part_1_close_with_new_colon as time) step_32_times_part_1_close_cast_as_time,
+         safe_cast(step_29_times_part_2_open_with_new_colon as time)  step_33_times_part_2_open_cast_as_time,
          safe_cast(step_30_times_part_2_close_with_new_colon as time) step_34_times_part_2_close_cast_as_time
 
 
@@ -542,6 +543,7 @@ from stg_023
 select*
 from stg_024
 
+order by 1
 
 			
 			
@@ -553,4 +555,3 @@ from stg_024
         
         		
                 			
- */
