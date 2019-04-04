@@ -1,13 +1,4 @@
-```sql
 
-from  `data-science-course-226116.sql_lessons.compare_costs`           costs
-
-inner join  `data-science-course-226116.sql_lessons.shopping_items`      items 
-
-
-on costs.item = items.item
-
-```
 
 1) If I were to buy every medicine item on the list, where is it cheapest to buy it?
 
