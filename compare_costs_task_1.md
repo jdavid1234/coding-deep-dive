@@ -11,7 +11,7 @@ on costs.item = items.item
 
 1) If I were to buy every medicine item on the list, where is it cheapest to buy it?
 
-2) On average, which store has the cheapest household items?
+2) On average, which store has the cheapest `household items?
 
 3) How many different kinds of subcategories are in this table? 
 
