@@ -1,5 +1,5 @@
 
-
+####Here's how to write a **_Cast_** vs **_Safe Cast_** 
 
 ```sql
 

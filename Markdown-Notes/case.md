@@ -1,3 +1,5 @@
+####Here's how to write a Case 
+
 select *,
 
 case  when county_name like '%A%' 
