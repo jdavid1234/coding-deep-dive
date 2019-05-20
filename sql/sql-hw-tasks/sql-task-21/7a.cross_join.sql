@@ -1,9 +1,5 @@
 select     station.station_id,	
-           station.short_name,	
-           station.lat,
-           station.lon,
-           station.region_id,
-           station.rental_methods,
+           station.short_name,
            regions.name
 
 
