@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" type="text/css" href="contact_cake_smash.css">
+
+
+</head>
+
+<div id="logo">
+    <img src="/home/yoss/Downloads/leah_g_logo.png" id="logo">
+</div>
+
+
+<body>
+
+<div id="border">
+
+    <ul id="menu">
+
+        <li><a href="link_to Home page">HOME</a></li>
+        <li><a href="link_to Gallery page">GALLERY</a></li>
+        <li><a href="link_to About page">ABOUT</a></li>
+        <li><a href="link_to Services page">SERVICES</a></li>
+        <li><a href="link_to Blog page">BLOG</a></li>
+        <li><a class="current" href="/home/yoss/repos/coding-deep-dive/html_shallow_dive/leah_photos/contact_cake_smash.html">CONTACT</a>
+        </li>
+
+    </ul>
+
+
+
+
+
+    <div id="all_text">
+        <h3>CONTACT</h3>
+
+
+        <p id=contact_intro>What kind of photoshoot session were you looking to get in touch about: <br />
+
+            Headshot  
+            <button type="button" onclick="document.getElementById('sitter_form').style.display='block'">Sitter</button>
+                        
+                    
+            <button id="cake_button">Cake Smash</button>
+
+
+            Couples
+            
+            Infants  
+            
+            Maternity
+            
+            Family
+            
+            Large Group
+            
+            Man’s best friend
+            
+            Other
+           
+        </p>
+<!--cake_smash_form--------------start-------------------------------------------cake_smash_form---------------------------------------------------------->
+
+<div id="cake_smash_form" style="display: none">
+
+
+        <p>I would love to chat with you about your baby's cake smash. <br />
+            Use the contact form below to get in touch. I can't wait to hear from you!</p>
+
+        <form action="contact_cake_smash.js" method="">
+
+            <p>
+
+
+                <Label>Name * <br />
+
+
+
+
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name" size="25"
+                        maxlength="20" />
+
+
+
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" size="25"
+                        maxlength="20" />
+
+
+            </p>
+
+            <p>
+                <Label>Your baby's name. (What you actually call them, not the name on their passport...) <br />
+
+
+
+
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name" size="25"
+                        maxlength="20"  />
+
+
+
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" size="25"
+                        maxlength="20" />
+
+
+            </p>
+
+
+            <p>
+                <label>Your Baby's birthday <br />
+
+
+                    <label>
+                        <select id="month" name="month">
+
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="Novemeber">Novemeber</option>
+                            <option value="December">December</option>
+
+
+                        </select>
+                    </label>
+
+
+
+
+
+                    <label>
+                        <select id="day" name="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+
+
+                        </select>
+                    </label>
+
+
+
+
+                    <label>
+                        <select id="year" name="year">
+
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+
+
+
+                        </select>
+                    </label>
+
+
+
+                </label>
+
+
+            </p>
+
+
+
+            <p>
+                <table>
+                    <tr>
+
+                        <td>
+                            <label class="container" id="container_boy">Boy
+                                <input type="radio" name="gender" value="boy" />
+                                <span class="checkmark" id="checkmark_boy"></span>
+                            </label>
+                        </td>
+
+
+                        <td>
+                            <label class="container" id="container_girl">Girl
+                                <input type="radio" name="gender" value="girl" />
+
+                                <span class="checkmark" id="checkmark_girl"></span>
+                            </label>
+                        </td>
+
+                    </tr>
+                </table>
+            </p>
+
+
+
+
+
+            <p>
+
+                <label>Phone * <br />
+
+
+                    <input type="tel" name="phone" id="phone" placeholder="***" size="3" maxlength="3" />
+
+                    <input type="tel" name="phone" id="phone" placeholder="***" size="3" maxlength="3" />
+
+
+                    <input type="tel" name="phone" id="phone" placeholder="****" size="4" maxlength="4" />
+                </label>
+
+            </p>
+
+
+
+            <p>
+
+                <input type="email" name="email" id="email" placeholder="Email Address" size="25" maxlength="50" />
+
+
+            </p>
+
+
+
+
+
+            <p>
+                <label>When would you like the photoshoot? <br />
+
+
+                    <label>
+                        <select id="month" name="month">
+
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="Novemeber">Novemeber</option>
+                            <option value="December">December</option>
+
+
+                        </select>
+                    </label>
+
+
+
+
+
+                    <label>
+                        <select id="day" name="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+
+
+                        </select>
+                    </label>
+
+
+
+
+                    <label>
+                        <select id="year" name="year">
+
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+
+
+
+                        </select>
+                    </label>
+
+
+
+                </label>
+
+
+                <label><select id="hour" name="hour">
+
+                        <option value="01:00">01:00</option>
+                        <option value="01:30">01:30</option>
+                        <option value="02:00">02:00</option>
+                        <option value="02:30">02:30</option>
+                        <option value="03:00">03:00</option>
+                        <option value="03:30">03:30</option>
+                        <option value="04:00">04:00</option>
+                        <option value="04:30">04:30</option>
+                        <option value="05:00">05:00</option>
+                        <option value="05:30">05:30</option>
+                        <option value="06:00">06:00</option>
+                        <option value="06:30">06:30</option>
+                        <option value="07:00">07:00</option>
+                        <option value="07:30">07:30</option>
+                        <option value="08:00">08:00</option>
+                        <option value="08:30">08:30</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+
+
+                    </select></label>
+
+
+
+                <label><select id="section" name="section">
+
+                        <option value="am">am</option>
+                        <option value="pm">pm</option>
+
+
+
+                    </select></label>
+
+
+
+
+
+            </p>
+
+
+
+
+
+            <p>
+                Where would you like the photoshoot? <br />
+                <input type="text" name="venue" id="venue" placeholder="My studio? Your house? A park? Other ideas..?"
+                    size="50" maxlength="50" />
+
+            </p>
+
+
+
+            <p>
+                How did you hear about me? <br />
+                <input type="text" name="source" id="source" size="50" maxlength="50" />
+
+            </p>
+
+
+            <p>
+                Tell me MORE! <br />
+                I want to know everything you had in mind for this special day. Outfits, props, <br />
+                really just anything you can think of to make these photos stand out. <br />
+                <textarea id="text_box" name="feedback" rows="6" cols="34" maxlength="200"></textarea>
+
+
+
+            </p>
+
+
+            <p id="confirm">
+                <input type="submit" name="button" id="button" size="50" maxlength="50" />
+
+
+
+            </p>
+
+            </p>
+
+
+        </form>
+
+        <img src="/home/yoss/Downloads/cake_smash/cake_smash_devour_crop.png" width="600" id="one_image">
+
+
+    </div> <!--this is the cake smash form div-->
+        
+
+<!--cake_smash_form-----------end----------------------------------------------cake_smash_form------------------------------------------------------>
+
+
+
+
+
+
+<!--Sitter_form--------------start-------------------------------------------cake_smash_form---------------------------------------------------------->
+
+<div id="sitter_form" style="display: none">
+
+
+    <p>I would love to chat with you about a sitter session for your baby. <br />
+        Use the contact form below to get in touch. I can't wait to hear from you!</p>
+
+    <form action="contact_cake_smash.js" method="">
+
+        <p>
+
+
+            <Label>Name * <br />
+
+
+
+
+                <input type="text" name="first_name" id="first_name" placeholder="First Name" size="25"
+                    maxlength="20" />
+
+
+
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" size="25"
+                    maxlength="20" />
+
+
+        </p>
+
+        <p>
+            <Label>Your baby's name. (What you actually call them, not the name on their passport...) <br />
+
+
+
+
+                <input type="text" name="first_name" id="first_name" placeholder="First Name" size="25"
+                    maxlength="20" />
+
+
+
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" size="25"
+                    maxlength="20" />
+
+
+        </p>
+
+
+        <p>
+            <label>Your Baby's birthday <br />
+
+
+                <label>
+                    <select id="month" name="month">
+
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="Novemeber">Novemeber</option>
+                        <option value="December">December</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+
+                <label>
+                    <select id="day" name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+                <label>
+                    <select id="year" name="year">
+
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+
+
+
+                    </select>
+                </label>
+
+
+
+            </label>
+
+
+        </p>
+
+
+
+        <p>
+            <table>
+                <tr>
+
+                    <td>
+                        <label class="container" id="container_boy">Boy
+                            <input type="radio" name="gender" value="boy" />
+                            <span class="checkmark" id="checkmark_boy"></span>
+                        </label>
+                    </td>
+
+
+                    <td>
+                        <label class="container" id="container_girl">Girl
+                            <input type="radio" name="gender" value="girl" />
+
+                            <span class="checkmark" id="checkmark_girl"></span>
+                        </label>
+                    </td>
+
+                </tr>
+            </table>
+        </p>
+
+
+
+
+
+        <p>
+
+            <label>Phone * <br />
+
+
+                <input type="tel" name="phone" id="phone" placeholder="***" size="3" maxlength="3" />
+
+                <input type="tel" name="phone" id="phone" placeholder="***" size="3" maxlength="3" />
+
+
+                <input type="tel" name="phone" id="phone" placeholder="****" size="4" maxlength="4" />
+            </label>
+
+        </p>
+
+
+
+        <p>
+
+            <input type="email" name="email" id="email" placeholder="Email Address" size="25" maxlength="50" />
+
+
+        </p>
+
+
+
+
+
+        <p>
+            <label>When would you like the photoshoot? <br />
+
+
+                <label>
+                    <select id="month" name="month">
+
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="Novemeber">Novemeber</option>
+                        <option value="December">December</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+
+                <label>
+                    <select id="day" name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+                <label>
+                    <select id="year" name="year">
+
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+
+
+
+                    </select>
+                </label>
+
+
+
+            </label>
+
+
+            <label><select id="hour" name="hour">
+
+                    <option value="01:00">01:00</option>
+                    <option value="01:30">01:30</option>
+                    <option value="02:00">02:00</option>
+                    <option value="02:30">02:30</option>
+                    <option value="03:00">03:00</option>
+                    <option value="03:30">03:30</option>
+                    <option value="04:00">04:00</option>
+                    <option value="04:30">04:30</option>
+                    <option value="05:00">05:00</option>
+                    <option value="05:30">05:30</option>
+                    <option value="06:00">06:00</option>
+                    <option value="06:30">06:30</option>
+                    <option value="07:00">07:00</option>
+                    <option value="07:30">07:30</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+
+
+                </select></label>
+
+
+
+            <label><select id="section" name="section">
+
+                    <option value="am">am</option>
+                    <option value="pm">pm</option>
+
+
+
+                </select></label>
+
+
+
+
+
+        </p>
+
+
+
+
+
+        <p>
+            Where would you like the photoshoot? <br />
+            <input type="text" name="venue" id="venue" placeholder="My studio? Your house? A park? Other ideas..?"
+                size="50" maxlength="50" />
+
+        </p>
+
+
+
+        <p>
+            How did you hear about me? <br />
+            <input type="text" name="source" id="source" size="50" maxlength="50" />
+
+        </p>
+
+
+        <p>
+            Tell me MORE! <br />
+            I want to know everything you had in mind for this special day. Outfits, props, <br />
+            really just anything you can think of to make these photos stand out. <br />
+            <textarea id="text_box" name="feedback" rows="6" cols="34" maxlength="200"></textarea>
+
+
+
+        </p>
+
+
+        <p id="confirm">
+            <input type="submit" name="button" id="button" size="50" maxlength="50" />
+
+
+
+        </p>
+
+        </p>
+
+
+    </form>
+
+    <img src="/home/yoss/Downloads/sitter_session/rosie_white_blanket.jpg" width="600" id="one_image">
+
+
+</div> <!--this is the cake smash form div-->
+    
+
+<!--Siter_form-----------end----------------------------------------------sitter_form------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+<!--Infants_form--------------start-------------------------------------------Infants_form---------------------------------------------------------->
+
+<div id="infants_form" style="display: none">
+
+
+    <p>I would love to chat with you about a session for your infant.<br />
+        Use the contact form below to get in touch. I can't wait to hear from you!</p>
+
+    <form action="infants.js" method="">
+
+        <p>
+
+
+            <Label>Name * <br />
+
+
+
+
+                <input type="text" name="first_name" id="first_name" placeholder="First Name" size="25"
+                    maxlength="20" />
+
+
+
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" size="25"
+                    maxlength="20" />
+
+
+        </p>
+
+        <p>
+            <Label>Your baby's name. (What you actually call them, not the name on their passport...) <br />
+
+
+
+
+                <input type="text" name="first_name" id="first_name" placeholder="First Name" size="25"
+                    maxlength="20" />
+
+
+
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" size="25"
+                    maxlength="20" />
+
+
+        </p>
+
+
+        <p>
+            <label>Your Baby's birthday <br />
+
+
+                <label>
+                    <select id="month" name="month">
+
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="Novemeber">Novemeber</option>
+                        <option value="December">December</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+
+                <label>
+                    <select id="day" name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+                <label>
+                    <select id="year" name="year">
+
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+
+
+
+                    </select>
+                </label>
+
+
+
+            </label>
+
+
+        </p>
+
+
+
+        <p>
+            <table>
+                <tr>
+
+                    <td>
+                        <label class="container" id="container_boy">Boy
+                            <input type="radio" name="gender" value="boy" />
+                            <span class="checkmark" id="checkmark_boy"></span>
+                        </label>
+                    </td>
+
+
+                    <td>
+                        <label class="container" id="container_girl">Girl
+                            <input type="radio" name="gender" value="girl" />
+
+                            <span class="checkmark" id="checkmark_girl"></span>
+                        </label>
+                    </td>
+
+                </tr>
+            </table>
+        </p>
+
+
+
+
+
+        <p>
+
+            <label>Phone * <br />
+
+
+                <input type="tel" name="phone" id="phone" placeholder="***" size="3" maxlength="3" />
+
+                <input type="tel" name="phone" id="phone" placeholder="***" size="3" maxlength="3" />
+
+
+                <input type="tel" name="phone" id="phone" placeholder="****" size="4" maxlength="4" />
+            </label>
+
+        </p>
+
+
+
+        <p>
+
+            <input type="email" name="email" id="email" placeholder="Email Address" size="25" maxlength="50" />
+
+
+        </p>
+
+
+
+
+
+        <p>
+            <label>When would you like the photoshoot? <br />
+
+
+                <label>
+                    <select id="month" name="month">
+
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="Novemeber">Novemeber</option>
+                        <option value="December">December</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+
+                <label>
+                    <select id="day" name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+
+
+                    </select>
+                </label>
+
+
+
+
+                <label>
+                    <select id="year" name="year">
+
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+
+
+
+                    </select>
+                </label>
+
+
+
+            </label>
+
+
+            <label><select id="hour" name="hour">
+
+                    <option value="01:00">01:00</option>
+                    <option value="01:30">01:30</option>
+                    <option value="02:00">02:00</option>
+                    <option value="02:30">02:30</option>
+                    <option value="03:00">03:00</option>
+                    <option value="03:30">03:30</option>
+                    <option value="04:00">04:00</option>
+                    <option value="04:30">04:30</option>
+                    <option value="05:00">05:00</option>
+                    <option value="05:30">05:30</option>
+                    <option value="06:00">06:00</option>
+                    <option value="06:30">06:30</option>
+                    <option value="07:00">07:00</option>
+                    <option value="07:30">07:30</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+
+
+                </select></label>
+
+
+
+            <label><select id="section" name="section">
+
+                    <option value="am">am</option>
+                    <option value="pm">pm</option>
+
+
+
+                </select></label>
+
+
+
+
+
+        </p>
+
+
+
+
+
+        <p>
+            Where would you like the photoshoot? <br />
+            <input type="text" name="venue" id="venue" placeholder="My studio? Your house? A park? Other ideas..?"
+                size="50" maxlength="50" />
+
+        </p>
+
+
+
+        <p>
+            How did you hear about me? <br />
+            <input type="text" name="source" id="source" size="50" maxlength="50" />
+
+        </p>
+
+
+        <p>
+            Tell me MORE! <br />
+            I want to know everything you had in mind for this special day. Outfits, props, <br />
+            really just anything you can think of to make these photos stand out. <br />
+            <textarea id="text_box" name="feedback" rows="6" cols="34" maxlength="200"></textarea>
+
+
+
+        </p>
+
+
+        <p id="confirm">
+            <input type="submit" name="button" id="button" size="50" maxlength="50" />
+
+
+
+        </p>
+
+        </p>
+
+
+    </form>
+
+    <img src="/home/yoss/Downloads/sitter_session/rosie_white_blanket.jpg" width="600" id="one_image">
+
+
+</div> <!--this is the infants form div-->
+    
+
+<!--infants_form-----------end----------------------------------------------infants_form---------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <!--this is the all_tex div-->
+    
+</div> <!--this is the border div-->
+
+<script src="contact_cake_smash.js"></script>
+</body>
+
+</html>
